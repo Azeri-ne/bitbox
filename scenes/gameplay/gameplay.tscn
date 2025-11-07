@@ -1,0 +1,140 @@
+[gd_scene load_steps=8 format=3 uid="uid://boecpxlajeiuu"]
+
+[ext_resource type="PackedScene" uid="uid://dstchf5c7khvt" path="res://scenes/gameplay/button.tscn" id="1_x0t60"]
+[ext_resource type="Shader" uid="uid://2t7k70a2og8j" path="res://shaders/button.gdshader" id="2_2p25t"]
+[ext_resource type="FontFile" uid="uid://bnicgoayeg4qr" path="res://assets/fonts/BoldPixels.ttf" id="3_2p25t"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m3hu3"]
+resource_local_to_scene = true
+shader = ExtResource("2_2p25t")
+shader_parameter/flash_strength = 0.89999997615814
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2p25t"]
+resource_local_to_scene = true
+shader = ExtResource("2_2p25t")
+shader_parameter/flash_strength = 0.89999997615814
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q64rj"]
+resource_local_to_scene = true
+shader = ExtResource("2_2p25t")
+shader_parameter/flash_strength = 0.89999997615814
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0w2j2"]
+resource_local_to_scene = true
+shader = ExtResource("2_2p25t")
+shader_parameter/flash_strength = 0.89999997615814
+
+[node name="Gameplay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(577, 349)
+scale = Vector2(0.295, 0.295)
+
+[node name="TempBackground" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Playfield" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="LeftBorder" type="ColorRect" parent="CanvasLayer/Playfield"]
+layout_mode = 0
+offset_left = 380.0
+offset_right = 383.0
+offset_bottom = 648.0
+
+[node name="Button1" parent="CanvasLayer/Playfield" instance=ExtResource("1_x0t60")]
+material = SubResource("ShaderMaterial_m3hu3")
+position = Vector2(430, 600)
+scale = Vector2(0.35, 0.35)
+
+[node name="Button2" parent="CanvasLayer/Playfield" instance=ExtResource("1_x0t60")]
+material = SubResource("ShaderMaterial_2p25t")
+position = Vector2(520, 600)
+scale = Vector2(0.35, 0.35)
+
+[node name="Button3" parent="CanvasLayer/Playfield" instance=ExtResource("1_x0t60")]
+material = SubResource("ShaderMaterial_q64rj")
+position = Vector2(610, 600)
+scale = Vector2(0.35, 0.35)
+
+[node name="Button4" parent="CanvasLayer/Playfield" instance=ExtResource("1_x0t60")]
+material = SubResource("ShaderMaterial_0w2j2")
+position = Vector2(700, 600)
+scale = Vector2(0.35, 0.35)
+
+[node name="RightBorder" type="ColorRect" parent="CanvasLayer/Playfield"]
+layout_mode = 0
+offset_left = 750.0
+offset_right = 753.0
+offset_bottom = 648.0
+
+[node name="ComboLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.0
+offset_top = -24.0
+offset_right = 27.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_2p25t")
+theme_override_font_sizes/font_size = 48
+text = "67"
+
+[node name="JudgementLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 21.0
+offset_right = 20.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_2p25t")
+theme_override_font_sizes/font_size = 18
+text = "Fuck"
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -95.0
+offset_bottom = 27.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("3_2p25t")
+theme_override_font_sizes/font_size = 42
+text = "000000"
+
+[node name="AccuracyLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -74.0
+offset_top = 38.0
+offset_right = -2.0
+offset_bottom = 70.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("3_2p25t")
+theme_override_font_sizes/font_size = 32
+text = "100%"

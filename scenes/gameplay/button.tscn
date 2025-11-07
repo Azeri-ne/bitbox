@@ -1,7 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dstchf5c7khvt"]
+[gd_scene load_steps=7 format=3 uid="uid://dstchf5c7khvt"]
 
 [ext_resource type="Texture2D" uid="uid://bsrickecabex3" path="res://assets/gameplay/button_pressed.png" id="1_0h2cy"]
+[ext_resource type="Shader" uid="uid://2t7k70a2og8j" path="res://shaders/button.gdshader" id="1_wal86"]
 [ext_resource type="Texture2D" uid="uid://cbsvgmeoajx7q" path="res://assets/gameplay/button_unpressed.png" id="2_bihpi"]
+[ext_resource type="Script" uid="uid://duiulgmvypvbr" path="res://scripts/button.gd" id="4_corvc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lkxyj"]
+resource_local_to_scene = true
+shader = ExtResource("1_wal86")
+shader_parameter/flash_strength = 0.89999997615814
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wal86"]
 animations = [{
@@ -23,5 +30,7 @@ animations = [{
 }]
 
 [node name="Button" type="AnimatedSprite2D"]
+material = SubResource("ShaderMaterial_lkxyj")
 sprite_frames = SubResource("SpriteFrames_wal86")
 animation = &"unpressed"
+script = ExtResource("4_corvc")

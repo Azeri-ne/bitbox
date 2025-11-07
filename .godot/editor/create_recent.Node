@@ -1,1 +1,10 @@
+Label
+Container
+ColorRect
+TextureRect
+Button
+HBoxContainer
+Control
+CanvasLayer
+Sprite2D
 AnimatedSprite2D
