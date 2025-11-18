@@ -1,3 +1,7 @@
+Sprite2D
+Timer
+AudioStreamPlayer
+AudioStreamPlayer2D
 Label
 Container
 ColorRect
@@ -6,5 +10,4 @@ Button
 HBoxContainer
 Control
 CanvasLayer
-Sprite2D
 AnimatedSprite2D

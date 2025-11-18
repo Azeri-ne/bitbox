@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://boecpxlajeiuu"]
+[gd_scene load_steps=9 format=3 uid="uid://boecpxlajeiuu"]
 
-[ext_resource type="PackedScene" uid="uid://dstchf5c7khvt" path="res://scenes/gameplay/button.tscn" id="1_x0t60"]
+[ext_resource type="Script" uid="uid://mu3oo14h2ivh" path="res://scripts/gameplay.gd" id="1_m3hu3"]
+[ext_resource type="PackedScene" uid="uid://dstchf5c7khvt" path="res://scenes/button.tscn" id="1_x0t60"]
 [ext_resource type="Shader" uid="uid://2t7k70a2og8j" path="res://shaders/button.gdshader" id="2_2p25t"]
 [ext_resource type="FontFile" uid="uid://bnicgoayeg4qr" path="res://assets/fonts/BoldPixels.ttf" id="3_2p25t"]
 
@@ -31,6 +32,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_m3hu3")
 
 [node name="Background" type="Sprite2D" parent="."]
 visible = false
@@ -42,6 +44,10 @@ layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="LevelEndTimer" type="Timer" parent="."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

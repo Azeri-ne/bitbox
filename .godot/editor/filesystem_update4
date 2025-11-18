@@ -1,2 +1,11 @@
 res://scenes/gameplay/gameplay.tscn
 res://shaders/button.gdshader
+res://scripts/gameplay.gd
+res://scenes/gameplay/lane.tscn
+res://scripts/lane.gd
+res://scripts/note.gd
+res://scenes/gameplay/note.tscn
+res://scripts/hit_object.gd
+res://scripts/map.gd
+res://scripts/timing_point.gd
+res://scenes/gameplay.tscn
