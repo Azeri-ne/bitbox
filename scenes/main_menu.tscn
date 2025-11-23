@@ -135,3 +135,82 @@ theme_override_fonts/font = ExtResource("1_l6cm7")
 theme_override_font_sizes/font_size = 48
 text = "Exit
 "
+
+[node name="AuthWidget" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AuthPanel" type="Panel" parent="AuthWidget"]
+layout_mode = 0
+offset_left = 688.0
+offset_top = 56.0
+offset_right = 1136.0
+offset_bottom = 232.0
+
+[node name="Username" type="Label" parent="AuthWidget/AuthPanel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 136.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 32
+text = "Username:"
+
+[node name="Password" type="Label" parent="AuthWidget/AuthPanel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 56.0
+offset_right = 142.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 32
+text = "Password:"
+
+[node name="UsernameInput" type="LineEdit" parent="AuthWidget/AuthPanel"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 16.0
+offset_right = 432.0
+offset_bottom = 47.0
+theme_override_fonts/font = ExtResource("1_l6cm7")
+
+[node name="PasswordInput" type="LineEdit" parent="AuthWidget/AuthPanel"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 56.0
+offset_right = 432.0
+offset_bottom = 87.0
+theme_override_fonts/font = ExtResource("1_l6cm7")
+secret = true
+
+[node name="ForgotPassword" type="Label" parent="AuthWidget/AuthPanel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 144.0
+offset_right = 150.0
+offset_bottom = 176.0
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 16
+text = "Forgot password?"
+
+[node name="Login" type="Button" parent="AuthWidget/AuthPanel"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 104.0
+offset_right = 282.0
+offset_bottom = 144.0
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 32
+text = "Login"
+
+[node name="Signup" type="Button" parent="AuthWidget/AuthPanel"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 104.0
+offset_right = 400.0
+offset_bottom = 144.0
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 32
+text = "Signup"

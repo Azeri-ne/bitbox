@@ -1,6 +1,8 @@
 Button
-Control
+LineEdit
 Label
+Panel
+Control
 Container
 ColorRect
 Sprite2D
@@ -10,4 +12,3 @@ AudioStreamPlayer2D
 TextureRect
 HBoxContainer
 CanvasLayer
-AnimatedSprite2D
