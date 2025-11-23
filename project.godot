@@ -15,6 +15,14 @@ run/main_scene="uid://boecpxlajeiuu"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Talo="*res://addons/talo/talo_manager.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/talo/plugin.cfg")
+
 [rendering]
 
 renderer/rendering_method="mobile"

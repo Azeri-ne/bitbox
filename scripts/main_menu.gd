@@ -58,9 +58,6 @@ func _init_auth_panel_button():
 func _init_description_panel():
 	_description_panel.hide()
 	
-func _show_button_description():
-	var description = _description_panel.get_node("Description")
-	
 func _setup_button_description(button: Button, text: String) -> void:
 	button.mouse_entered.connect(Callable(self, "_on_button_hovered").bind(text))
 	button.mouse_exited.connect(Callable(self, "_on_button_unhovered"))

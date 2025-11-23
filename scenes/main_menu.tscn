@@ -207,6 +207,8 @@ offset_top = 16.0
 offset_right = 432.0
 offset_bottom = 47.0
 theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Your account name"
 
 [node name="PasswordInput" type="LineEdit" parent="AuthWidget/AuthPanel"]
 layout_mode = 0
@@ -215,7 +217,10 @@ offset_top = 56.0
 offset_right = 432.0
 offset_bottom = 87.0
 theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Keep it secure"
 secret = true
+secret_character = "*"
 
 [node name="Login" type="Button" parent="AuthWidget/AuthPanel"]
 layout_mode = 0
