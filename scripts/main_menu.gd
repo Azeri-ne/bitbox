@@ -1,8 +1,14 @@
 extends Control
 
+@onready var _clock: Label = $TopPanel/Clock
 
-@onready var clock: Label = $TopPanel/Clock
+@onready var _play_button: Button = $Buttons/Play
+@onready var _gallery_button: Button = $Buttons/Gallery
+@onready var _options_button: Button = $Buttons/Options
+@onready var _exit_button: Button = $Buttons/Exit
 
+@onready var _auth_panel_button: Button = $TopPanel/Authentication
+@onready var _auth_panel: Control = $AuthWidget
 
 func _update_time():
 	var datetime = Time.get_datetime_dict_from_system()
@@ -13,13 +19,12 @@ func _update_time():
 		
 	var am_pm = "AM" if datetime.hour < 12 else "PM"
 	
-	clock.text = "%d:%02d:%02d %s" % [
+	_clock.text = "%d:%02d:%02d %s" % [
 		hour_12, 
 		datetime.minute, 
 		datetime.second, 
 		am_pm
 		]
-
 
 func _init_timer(timer):
 	timer.wait_time = 1.0
@@ -28,9 +33,23 @@ func _init_timer(timer):
 	timer.timeout.connect(_update_time)
 	timer.start()
 
+func _init_main_buttons():
+	_exit_button.pressed.connect(get_tree().quit)
 
-func _process(delta: float) -> void:
+func _toggle_auth_panel_visibility():
+	_auth_panel.visible = not _auth_panel.visible
+
+func _init_auth_panel_button():
+	_auth_panel.hide()
+	
+	_auth_panel_button.pressed.connect(_toggle_auth_panel_visibility)
+
+func _process(_delta: float) -> void:
 	_update_time()
 	
+func _ready() -> void:
 	var timer := Timer.new()
 	_init_timer(timer)
+	
+	_init_main_buttons()
+	_init_auth_panel_button()

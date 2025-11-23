@@ -185,16 +185,6 @@ offset_bottom = 87.0
 theme_override_fonts/font = ExtResource("1_l6cm7")
 secret = true
 
-[node name="ForgotPassword" type="Label" parent="AuthWidget/AuthPanel"]
-layout_mode = 0
-offset_left = 24.0
-offset_top = 144.0
-offset_right = 150.0
-offset_bottom = 176.0
-theme_override_fonts/font = ExtResource("1_l6cm7")
-theme_override_font_sizes/font_size = 16
-text = "Forgot password?"
-
 [node name="Login" type="Button" parent="AuthWidget/AuthPanel"]
 layout_mode = 0
 offset_left = 200.0
@@ -214,3 +204,12 @@ offset_bottom = 144.0
 theme_override_fonts/font = ExtResource("1_l6cm7")
 theme_override_font_sizes/font_size = 32
 text = "Signup"
+
+[node name="ForgotPassword" type="Button" parent="AuthWidget/AuthPanel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 144.0
+offset_right = 141.0
+offset_bottom = 168.0
+theme_override_fonts/font = ExtResource("1_l6cm7")
+text = "Forgot password?"
