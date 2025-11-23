@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://coqip1olmk3yx"]
+[gd_scene load_steps=4 format=3 uid="uid://coqip1olmk3yx"]
 
 [ext_resource type="Script" uid="uid://b6tdfy1rhi3tc" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="FontFile" uid="uid://bnicgoayeg4qr" path="res://assets/fonts/BoldPixels.ttf" id="1_l6cm7"]
+[ext_resource type="FontFile" uid="uid://bmkbdvvc17xyt" path="res://assets/fonts/ThaleahFat.ttf" id="3_bqqt6"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -62,3 +63,29 @@ theme_override_fonts/font = ExtResource("1_l6cm7")
 theme_override_font_sizes/font_size = 32
 text = "Guest"
 alignment = 2
+
+[node name="GameTitle" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BitsuneBanko" type="Label" parent="GameTitle"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 112.0
+offset_right = 491.0
+offset_bottom = 235.0
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 60
+text = "Bitsune Banko's "
+horizontal_alignment = 1
+
+[node name="Bitbox" type="Label" parent="GameTitle"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 176.0
+offset_right = 349.0
+offset_bottom = 242.0
+theme_override_fonts/font = ExtResource("3_bqqt6")
+theme_override_font_sizes/font_size = 72
+text = "Bitbox"
