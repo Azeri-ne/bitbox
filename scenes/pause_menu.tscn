@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmirag4rao73v"]
+
+[ext_resource type="Script" uid="uid://c311mimkafswc" path="res://scripts/pause_menu.gd" id="1_myx47"]
+[ext_resource type="FontFile" uid="uid://bnicgoayeg4qr" path="res://assets/fonts/BoldPixels.ttf" id="1_n87rw"]
+
+[node name="PauseMenu" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5921569)
+script = ExtResource("1_myx47")
+
+[node name="ResumeButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 240.0
+offset_right = 618.0
+offset_bottom = 296.0
+theme_override_fonts/font = ExtResource("1_n87rw")
+theme_override_font_sizes/font_size = 72
+text = "Resume"
+
+[node name="RetryButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 328.0
+offset_right = 663.0
+offset_bottom = 408.0
+theme_override_fonts/font = ExtResource("1_n87rw")
+theme_override_font_sizes/font_size = 72
+text = "Retry"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 416.0
+offset_right = 647.0
+offset_bottom = 496.0
+theme_override_fonts/font = ExtResource("1_n87rw")
+theme_override_font_sizes/font_size = 72
+text = "Quit"
