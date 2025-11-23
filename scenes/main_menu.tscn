@@ -72,20 +72,66 @@ offset_bottom = 40.0
 [node name="BitsuneBanko" type="Label" parent="GameTitle"]
 layout_mode = 0
 offset_left = 64.0
-offset_top = 112.0
-offset_right = 491.0
-offset_bottom = 235.0
+offset_top = 72.0
+offset_right = 578.0
+offset_bottom = 195.0
 theme_override_fonts/font = ExtResource("1_l6cm7")
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 72
 text = "Bitsune Banko's "
 horizontal_alignment = 1
 
 [node name="Bitbox" type="Label" parent="GameTitle"]
 layout_mode = 0
-offset_left = 160.0
-offset_top = 176.0
-offset_right = 349.0
-offset_bottom = 242.0
+offset_left = 192.0
+offset_top = 152.0
+offset_right = 428.0
+offset_bottom = 235.0
 theme_override_fonts/font = ExtResource("3_bqqt6")
-theme_override_font_sizes/font_size = 72
+theme_override_font_sizes/font_size = 90
 text = "Bitbox"
+
+[node name="Buttons" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Play" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 272.0
+offset_right = 233.0
+offset_bottom = 340.0
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 48
+text = "Play"
+
+[node name="Gallery" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 352.0
+offset_right = 313.0
+offset_bottom = 420.0
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 48
+text = "Gallery"
+
+[node name="Options" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 432.0
+offset_right = 361.0
+offset_bottom = 500.0
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 48
+text = "Options"
+
+[node name="Exit" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 512.0
+offset_right = 409.0
+offset_bottom = 580.0
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 48
+text = "Exit
+"
