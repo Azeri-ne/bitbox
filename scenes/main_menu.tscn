@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://coqip1olmk3yx"]
+[gd_scene load_steps=5 format=3 uid="uid://coqip1olmk3yx"]
 
 [ext_resource type="Script" uid="uid://b6tdfy1rhi3tc" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="FontFile" uid="uid://bnicgoayeg4qr" path="res://assets/fonts/BoldPixels.ttf" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://der44epobbuul" path="res://temp/testbg.jpg" id="2_wu84c"]
 [ext_resource type="FontFile" uid="uid://bmkbdvvc17xyt" path="res://assets/fonts/ThaleahFat.ttf" id="3_bqqt6"]
 
 [node name="MainMenu" type="Control"]
@@ -18,20 +19,45 @@ layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0.5370113, 0.5370113, 0.5370113, 1)
+metadata/_edit_lock_ = true
 
 [node name="Background" type="Sprite2D" parent="."]
 visible = false
+position = Vector2(584, 328)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_wu84c")
+metadata/_edit_lock_ = true
+
+[node name="DescriptionPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 680.0
+offset_top = 464.0
+offset_right = 1032.0
+offset_bottom = 608.0
+
+[node name="Description" type="Label" parent="DescriptionPanel"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 24.0
+offset_right = 249.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 24
+text = "Tung tung tung sahur"
+autowrap_mode = 2
 
 [node name="TopPanel" type="Control" parent="."]
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 46.0
+metadata/_edit_lock_ = true
 
 [node name="Base" type="ColorRect" parent="TopPanel"]
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 46.0
 color = Color(0, 0, 0, 0.84313726)
+metadata/_edit_lock_ = true
 
 [node name="Title" type="Label" parent="TopPanel"]
 layout_mode = 0
@@ -42,6 +68,7 @@ offset_bottom = 44.0
 theme_override_fonts/font = ExtResource("1_l6cm7")
 theme_override_font_sizes/font_size = 32
 text = "Menu"
+metadata/_edit_lock_ = true
 
 [node name="Clock" type="Label" parent="TopPanel"]
 layout_mode = 0
@@ -52,6 +79,7 @@ offset_bottom = 44.0
 theme_override_fonts/font = ExtResource("1_l6cm7")
 theme_override_font_sizes/font_size = 32
 text = "00:00:00 AM"
+metadata/_edit_lock_ = true
 
 [node name="Authentication" type="Button" parent="TopPanel"]
 layout_mode = 0
@@ -63,11 +91,13 @@ theme_override_fonts/font = ExtResource("1_l6cm7")
 theme_override_font_sizes/font_size = 32
 text = "Guest"
 alignment = 2
+metadata/_edit_lock_ = true
 
 [node name="GameTitle" type="Control" parent="."]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_lock_ = true
 
 [node name="BitsuneBanko" type="Label" parent="GameTitle"]
 layout_mode = 0
@@ -94,6 +124,7 @@ text = "Bitbox"
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_lock_ = true
 
 [node name="Play" type="Button" parent="Buttons"]
 layout_mode = 0
@@ -140,6 +171,7 @@ text = "Exit
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_lock_ = true
 
 [node name="AuthPanel" type="Panel" parent="AuthWidget"]
 layout_mode = 0
