@@ -12,6 +12,9 @@ extends Control
 
 @onready var _description_panel: Panel = $DescriptionPanel
 
+@onready var _login_button: Button = $AuthWidget/AuthPanel/Login
+@onready var _signup_button: Button = $AuthWidget/AuthPanel/Signup
+
 func _update_time():
 	var datetime = Time.get_datetime_dict_from_system()
 	
@@ -37,6 +40,10 @@ func _init_timer(timer):
 
 func _init_main_buttons():
 	_exit_button.pressed.connect(get_tree().quit)
+	
+	_signup_button.pressed.connect(func():
+		get_tree().change_scene_to_file("res://scenes/account_creation.tscn")
+	)
 
 	_setup_button_description(_play_button, 
 		"Play the rhythm game.")

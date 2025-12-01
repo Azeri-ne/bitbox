@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://pee64folnv7x"]
+[gd_scene load_steps=3 format=3 uid="uid://pee64folnv7x"]
 
 [ext_resource type="FontFile" uid="uid://bnicgoayeg4qr" path="res://assets/fonts/BoldPixels.ttf" id="1_0xrlo"]
+[ext_resource type="Script" uid="uid://bqt426d51oxgs" path="res://scripts/account_creation.gd" id="1_6d1ls"]
 
 [node name="AccountCreation" type="Control"]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6d1ls")
 
 [node name="TempBackground" type="ColorRect" parent="."]
 layout_mode = 0
@@ -106,7 +108,7 @@ theme_override_fonts/font = ExtResource("1_0xrlo")
 theme_override_font_sizes/font_size = 48
 text = "Create Account!"
 
-[node name="Label" type="Label" parent="."]
+[node name="Status" type="Label" parent="."]
 layout_mode = 0
 offset_left = 528.0
 offset_top = 392.0
@@ -115,3 +117,13 @@ offset_bottom = 415.0
 theme_override_fonts/font = ExtResource("1_0xrlo")
 theme_override_font_sizes/font_size = 18
 text = "Skibidi toilet"
+
+[node name="GotoMain" type="Button" parent="."]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 512.0
+offset_right = 624.0
+offset_bottom = 552.0
+theme_override_fonts/font = ExtResource("1_0xrlo")
+theme_override_font_sizes/font_size = 24
+text = "Back"
