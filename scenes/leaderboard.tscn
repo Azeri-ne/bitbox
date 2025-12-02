@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://bkx8aagq0fc4o"]
+[gd_scene load_steps=2 format=3 uid="uid://bkx8aagq0fc4o"]
+
+[ext_resource type="FontFile" uid="uid://bnicgoayeg4qr" path="res://assets/fonts/BoldPixels.ttf" id="1_mrg81"]
 
 [node name="Leaderboard" type="Control"]
 layout_mode = 3
@@ -7,3 +9,53 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TempBackground" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.5370113, 0.5370113, 0.5370113, 1)
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 88.0
+offset_right = 1112.0
+offset_bottom = 560.0
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 576.0
+offset_right = 710.0
+offset_bottom = 632.0
+theme_override_fonts/font = ExtResource("1_mrg81")
+theme_override_font_sizes/font_size = 48
+text = "Play!"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 576.0
+offset_right = 534.0
+offset_bottom = 632.0
+theme_override_fonts/font = ExtResource("1_mrg81")
+theme_override_font_sizes/font_size = 48
+text = "Back"
+
+[node name="Header" type="Label" parent="."]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 16.0
+offset_right = 776.0
+offset_bottom = 80.0
+theme_override_fonts/font = ExtResource("1_mrg81")
+theme_override_font_sizes/font_size = 64
+text = "Leaderboard"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0

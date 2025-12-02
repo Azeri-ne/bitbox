@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6pnsiuoirn1x"]
+
+[ext_resource type="FontFile" uid="uid://bmkbdvvc17xyt" path="res://assets/fonts/ThaleahFat.ttf" id="1_oopvd"]
+[ext_resource type="FontFile" uid="uid://bnicgoayeg4qr" path="res://assets/fonts/BoldPixels.ttf" id="1_snbtp"]
+
+[node name="Panel" type="Panel"]
+offset_right = 872.0
+offset_bottom = 52.0
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 704.0
+offset_top = 8.0
+offset_right = 880.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("1_snbtp")
+theme_override_font_sizes/font_size = 42
+text = "000000"
+horizontal_alignment = 1
+
+[node name="Ranking" type="Label" parent="."]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("1_oopvd")
+theme_override_font_sizes/font_size = 48
+text = "#0"
+horizontal_alignment = 1
+
+[node name="Username" type="Label" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 8.0
+offset_right = 537.0
+offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("1_oopvd")
+theme_override_font_sizes/font_size = 42
+text = "Janrei Nino Ligon Africa"
+horizontal_alignment = 1

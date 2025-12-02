@@ -1,4 +1,3 @@
-res://scenes/account_creation.tscn
-res://addons/talo/samples/authentication/assets/theme.tres
+res://scenes/leaderboard.tscn
 res://shaders/button.gdshader
-res://scripts/account_creation.gd
+res://scenes/leaderboard_score.tscn

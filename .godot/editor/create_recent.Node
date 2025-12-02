@@ -1,6 +1,7 @@
-Label
-Button
 Panel
+VBoxContainer
+Button
+Label
 LineEdit
 Control
 Container
@@ -11,4 +12,3 @@ AudioStreamPlayer
 AudioStreamPlayer2D
 TextureRect
 HBoxContainer
-CanvasLayer
