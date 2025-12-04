@@ -249,3 +249,13 @@ offset_right = 141.0
 offset_bottom = 168.0
 theme_override_fonts/font = ExtResource("1_l6cm7")
 text = "Forgot password?"
+
+[node name="Status" type="Label" parent="AuthWidget/AuthPanel"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 120.0
+offset_right = 104.0
+offset_bottom = 143.0
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 14
+text = "Success!"

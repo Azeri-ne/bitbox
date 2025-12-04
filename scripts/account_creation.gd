@@ -1,8 +1,8 @@
 extends Control
 
-@onready var username_input: LineEdit = $UsernameInput
-@onready var email_input: LineEdit = $EmailInput
-@onready var password_input: LineEdit = $PasswordInput
+@onready var username: LineEdit = $UsernameInput
+@onready var email: LineEdit = $EmailInput
+@onready var password: LineEdit = $PasswordInput
 
 @onready var status: Label = $Status
 
@@ -19,8 +19,10 @@ func init_account_creation_status():
 
 func create_account():
 	var res = await Talo.player_auth.register(
-		username_input.text,
-		password_input.text,
+		username.text,
+		password.text,
+		email.text,
+		false
 	)
 	
 	if res == OK:
