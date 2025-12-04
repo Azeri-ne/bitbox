@@ -117,6 +117,7 @@ offset_bottom = 415.0
 theme_override_fonts/font = ExtResource("1_0xrlo")
 theme_override_font_sizes/font_size = 18
 text = "Skibidi toilet"
+horizontal_alignment = 1
 
 [node name="GotoMain" type="Button" parent="."]
 layout_mode = 0

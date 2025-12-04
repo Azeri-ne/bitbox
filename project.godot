@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+TaloInit="*res://scripts/talo.gd"
 Talo="*res://addons/talo/talo_manager.gd"
 
 [editor_plugins]
