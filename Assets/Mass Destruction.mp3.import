@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cfppp4apuh0ei"
+path="res://.godot/imported/Mass Destruction.mp3-055168dd23ee8e9743e3106b812e2f77.mp3str"
+
+[deps]
+
+source_file="res://Assets/Mass Destruction.mp3"
+dest_files=["res://.godot/imported/Mass Destruction.mp3-055168dd23ee8e9743e3106b812e2f77.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

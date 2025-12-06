@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://drkj3qe1u7vjn"]
+
+[ext_resource type="Script" uid="uid://dagmbvjctvnf4" path="res://Scripts/note_pool.gd" id="1_omage"]
+[ext_resource type="PackedScene" uid="uid://cofc7csdh3fep" path="res://Scenes/note.tscn" id="2_3vmo8"]
+
+[node name="NotePool" type="Node"]
+script = ExtResource("1_omage")
+note_scene = ExtResource("2_3vmo8")

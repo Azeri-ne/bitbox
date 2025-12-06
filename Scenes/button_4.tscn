@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://xh7pmm7xms00"]
+
+[ext_resource type="Script" uid="uid://4886ijdyb2c7" path="res://Scripts/button_4.gd" id="1_ot5wv"]
+[ext_resource type="Texture2D" uid="uid://dpxmvmye07fdw" path="res://Assets/button_unpressed.png" id="2_ot5wv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ot5wv"]
+radius = 73.0
+
+[node name="Button4" type="StaticBody2D"]
+script = ExtResource("1_ot5wv")
+
+[node name="button4Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.382292, 0.382292)
+texture = ExtResource("2_ot5wv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_ot5wv")

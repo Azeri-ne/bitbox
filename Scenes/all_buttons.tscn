@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbu1bkk0sv40n"]
+
+[ext_resource type="Script" uid="uid://wukrtawd57md" path="res://Scripts/all_buttons.gd" id="1_2bt1i"]
+[ext_resource type="PackedScene" uid="uid://crdnhvacs17m0" path="res://Scenes/button.tscn" id="1_qg6ro"]
+[ext_resource type="PackedScene" uid="uid://b2dt48osf7h82" path="res://Scenes/button_2.tscn" id="2_2bt1i"]
+[ext_resource type="PackedScene" uid="uid://bu7bi23elufdm" path="res://Scenes/button_3.tscn" id="3_vhqy2"]
+[ext_resource type="PackedScene" uid="uid://xh7pmm7xms00" path="res://Scenes/button_4.tscn" id="4_43k56"]
+
+[node name="AllButtons" type="Node2D"]
+script = ExtResource("1_2bt1i")
+
+[node name="Button1" parent="." instance=ExtResource("1_qg6ro")]
+modulate = Color(1, 0.00999999, 0.00999999, 1)
+
+[node name="Button2" parent="." instance=ExtResource("2_2bt1i")]
+modulate = Color(0.000226215, 0.530004, 0.997954, 1)
+position = Vector2(300, 0)
+
+[node name="Button3" parent="." instance=ExtResource("3_vhqy2")]
+modulate = Color(0.135667, 0.74, 0, 1)
+position = Vector2(600, 0)
+
+[node name="Button4" parent="." instance=ExtResource("4_43k56")]
+modulate = Color(0.875031, 0.348324, 1, 1)
+position = Vector2(900, 0)

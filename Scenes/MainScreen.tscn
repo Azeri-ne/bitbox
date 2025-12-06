@@ -1,0 +1,254 @@
+[gd_scene load_steps=6 format=3 uid="uid://dv27w88ywekxi"]
+
+[ext_resource type="Script" uid="uid://5b6ia0sq0h71" path="res://Scripts/Main_Screen.gd" id="1_ip4yt"]
+[ext_resource type="Texture2D" uid="uid://der44epobbuul" path="res://temp/testbg.jpg" id="2_xg8v3"]
+[ext_resource type="FontFile" uid="uid://bur2jhbh8pnf0" path="res://Assets/BoldPixels.ttf" id="3_a6epe"]
+[ext_resource type="FontFile" uid="uid://cpc00oc4ly017" path="res://Assets/ThaleahFat.ttf" id="4_3bkv3"]
+[ext_resource type="AudioStream" uid="uid://hyn62o8uxnvb" path="res://Assets/P3P - Title screen theme.mp3" id="5_xg8v3"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ip4yt")
+
+[node name="TempBackground" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.537011, 0.537011, 0.537011, 1)
+metadata/_edit_lock_ = true
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(584, 328)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_xg8v3")
+metadata/_edit_lock_ = true
+
+[node name="DescriptionPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 680.0
+offset_top = 464.0
+offset_right = 1032.0
+offset_bottom = 608.0
+
+[node name="Description" type="Label" parent="DescriptionPanel"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 24.0
+offset_right = 249.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("3_a6epe")
+theme_override_font_sizes/font_size = 24
+text = "Tung tung tung sahur"
+autowrap_mode = 2
+
+[node name="TopPanel" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 46.0
+metadata/_edit_lock_ = true
+
+[node name="Base" type="ColorRect" parent="TopPanel"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 46.0
+color = Color(0, 0, 0, 0.843137)
+metadata/_edit_lock_ = true
+
+[node name="Title" type="Label" parent="TopPanel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 83.0
+offset_bottom = 44.0
+theme_override_fonts/font = ExtResource("3_a6epe")
+theme_override_font_sizes/font_size = 32
+text = "Menu"
+metadata/_edit_lock_ = true
+
+[node name="Clock" type="Label" parent="TopPanel"]
+layout_mode = 0
+offset_left = 668.0
+offset_top = 8.0
+offset_right = 840.0
+offset_bottom = 44.0
+theme_override_fonts/font = ExtResource("3_a6epe")
+theme_override_font_sizes/font_size = 32
+text = "00:00:00 AM"
+metadata/_edit_lock_ = true
+
+[node name="Authentication" type="Button" parent="TopPanel"]
+layout_mode = 0
+offset_left = 1061.0
+offset_top = 4.0
+offset_right = 1143.0
+offset_bottom = 44.0
+theme_override_fonts/font = ExtResource("3_a6epe")
+theme_override_font_sizes/font_size = 32
+text = "Guest"
+alignment = 2
+metadata/_edit_lock_ = true
+
+[node name="GameTitle" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_lock_ = true
+
+[node name="BitsuneBanko" type="Label" parent="GameTitle"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 72.0
+offset_right = 578.0
+offset_bottom = 195.0
+theme_override_fonts/font = ExtResource("3_a6epe")
+theme_override_font_sizes/font_size = 72
+text = "Bitsune Banko's "
+horizontal_alignment = 1
+
+[node name="Bitbox" type="Label" parent="GameTitle"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 152.0
+offset_right = 428.0
+offset_bottom = 235.0
+theme_override_fonts/font = ExtResource("4_3bkv3")
+theme_override_font_sizes/font_size = 90
+text = "Bitbox"
+
+[node name="Buttons" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_lock_ = true
+
+[node name="Play" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 272.0
+offset_right = 233.0
+offset_bottom = 340.0
+theme_override_fonts/font = ExtResource("3_a6epe")
+theme_override_font_sizes/font_size = 48
+text = "Play"
+
+[node name="Gallery" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 352.0
+offset_right = 313.0
+offset_bottom = 420.0
+theme_override_fonts/font = ExtResource("3_a6epe")
+theme_override_font_sizes/font_size = 48
+text = "Gallery"
+
+[node name="Options" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 432.0
+offset_right = 361.0
+offset_bottom = 500.0
+theme_override_fonts/font = ExtResource("3_a6epe")
+theme_override_font_sizes/font_size = 48
+text = "Options"
+
+[node name="Exit" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 512.0
+offset_right = 409.0
+offset_bottom = 580.0
+theme_override_fonts/font = ExtResource("3_a6epe")
+theme_override_font_sizes/font_size = 48
+text = "Exit
+"
+
+[node name="AuthWidget" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_lock_ = true
+
+[node name="AuthPanel" type="Panel" parent="AuthWidget"]
+layout_mode = 0
+offset_left = 688.0
+offset_top = 56.0
+offset_right = 1136.0
+offset_bottom = 232.0
+
+[node name="Username" type="Label" parent="AuthWidget/AuthPanel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 136.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("3_a6epe")
+theme_override_font_sizes/font_size = 32
+text = "Username:"
+
+[node name="Password" type="Label" parent="AuthWidget/AuthPanel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 56.0
+offset_right = 142.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("3_a6epe")
+theme_override_font_sizes/font_size = 32
+text = "Password:"
+
+[node name="UsernameInput" type="LineEdit" parent="AuthWidget/AuthPanel"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 16.0
+offset_right = 432.0
+offset_bottom = 47.0
+theme_override_fonts/font = ExtResource("3_a6epe")
+
+[node name="PasswordInput" type="LineEdit" parent="AuthWidget/AuthPanel"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 56.0
+offset_right = 432.0
+offset_bottom = 87.0
+theme_override_fonts/font = ExtResource("3_a6epe")
+secret = true
+
+[node name="Login" type="Button" parent="AuthWidget/AuthPanel"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 104.0
+offset_right = 282.0
+offset_bottom = 144.0
+theme_override_fonts/font = ExtResource("3_a6epe")
+theme_override_font_sizes/font_size = 32
+text = "Login"
+
+[node name="Signup" type="Button" parent="AuthWidget/AuthPanel"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 104.0
+offset_right = 400.0
+offset_bottom = 144.0
+theme_override_fonts/font = ExtResource("3_a6epe")
+theme_override_font_sizes/font_size = 32
+text = "Signup"
+
+[node name="ForgotPassword" type="Button" parent="AuthWidget/AuthPanel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 144.0
+offset_right = 141.0
+offset_bottom = 168.0
+theme_override_fonts/font = ExtResource("3_a6epe")
+text = "Forgot password?"
+
+[node name="MenuTheme" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_xg8v3")
+parameters/looping = true
+
+[connection signal="pressed" from="Buttons/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]

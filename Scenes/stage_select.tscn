@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://dy6f2xgij1lo2"]
+
+[ext_resource type="Script" uid="uid://bpnih25wenn56" path="res://Scripts/stage_select.gd" id="1_bn3nu"]
+[ext_resource type="Texture2D" uid="uid://der44epobbuul" path="res://temp/testbg.jpg" id="2_rooga"]
+[ext_resource type="FontFile" uid="uid://bur2jhbh8pnf0" path="res://Assets/BoldPixels.ttf" id="3_x57uv"]
+
+[node name="StageSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bn3nu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(598, 372)
+scale = Vector2(0.395895, 0.395895)
+texture = ExtResource("2_rooga")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 35.0
+offset_right = 128.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("3_x57uv")
+theme_override_font_sizes/font_size = 40
+text = "Select Stage"
+
+[node name="Stage1" type="Button" parent="."]
+layout_mode = 2
+offset_left = 48.0
+offset_top = 104.0
+offset_right = 216.0
+offset_bottom = 135.0
+text = "Stage 1"
+
+[node name="Stage2" type="Button" parent="."]
+layout_mode = 2
+offset_left = 48.0
+offset_top = 152.0
+offset_right = 216.0
+offset_bottom = 183.0
+text = "Stage 2"
+
+[node name="Stage3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 200.0
+offset_right = 216.0
+offset_bottom = 231.0
+text = "Stage 3
+"
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 48.0
+offset_top = 285.0
+offset_right = 157.0
+offset_bottom = 316.0
+text = "Back"
+
+[connection signal="pressed" from="Stage1" to="." method="_on_stage_1_pressed"]
+[connection signal="pressed" from="Stage2" to="." method="_on_stage_2_pressed"]
+[connection signal="pressed" from="Stage3" to="." method="_on_stage_3_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

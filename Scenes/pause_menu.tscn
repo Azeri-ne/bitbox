@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://buf40phqqjsre"]
+
+[ext_resource type="Script" uid="uid://hv6v6dfjnr6j" path="res://Scripts/pause_menu.gd" id="1_emv3i"]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_emv3i")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1160.0
+offset_bottom = 653.0
+
+[node name="Resume" type="Button" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 224.0
+offset_right = 648.0
+offset_bottom = 255.0
+text = "Resume"
+
+[node name="Restart" type="Label" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 268.0
+offset_right = 648.0
+offset_bottom = 322.0
+theme_override_font_sizes/font_size = 30
+text = "Controls:
+D, K, F, G"
+horizontal_alignment = 1
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 384.0
+offset_right = 648.0
+offset_bottom = 415.0
+text = "Exit"
+
+[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
