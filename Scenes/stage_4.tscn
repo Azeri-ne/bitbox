@@ -1,0 +1,243 @@
+[gd_scene load_steps=15 format=3 uid="uid://biw6hb7tm21fb"]
+
+[ext_resource type="Script" uid="uid://dwp2u1hqjqso0" path="res://Scripts/stage.gd" id="1_y25c6"]
+[ext_resource type="Texture2D" uid="uid://qu02nuvwr7dl" path="res://temp/427871798_1026399028454818_618626392353757203_n.png" id="2_y25c6"]
+[ext_resource type="PackedScene" uid="uid://cofc7csdh3fep" path="res://Scenes/note.tscn" id="3_4tf8t"]
+[ext_resource type="PackedScene" uid="uid://drkj3qe1u7vjn" path="res://Scenes/note_pool.tscn" id="4_2c4a1"]
+[ext_resource type="AudioStream" uid="uid://cigqk2t5tpp0n" path="res://temp/ensou  - COMA 中菲字幕.mp3" id="5_f6a6x"]
+[ext_resource type="PackedScene" uid="uid://cbu1bkk0sv40n" path="res://Scenes/all_buttons.tscn" id="6_1c6ud"]
+[ext_resource type="FontFile" uid="uid://cbwm3603kuloa" path="res://Assets/VCR_OSD_MONO_1.001.ttf" id="7_205st"]
+[ext_resource type="FontFile" uid="uid://bur2jhbh8pnf0" path="res://Assets/BoldPixels.ttf" id="8_1s06m"]
+[ext_resource type="PackedScene" uid="uid://buf40phqqjsre" path="res://Scenes/pause_menu.tscn" id="9_osjy4"]
+[ext_resource type="Shader" uid="uid://bls25p7id2kw" path="res://Scripts/stage1.gdshader" id="10_n01yt"]
+[ext_resource type="Texture2D" uid="uid://nfmysfvojcru" path="res://Assets/hold_note_body.png" id="11_oq86f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d0qpb"]
+shader = ExtResource("10_n01yt")
+shader_parameter/vertical_stretch = 2.0
+shader_parameter/stretch_y = 3.0
+
+[sub_resource type="Curve" id="Curve_w4v1o"]
+_data = [Vector2(0.527778, 0.750973), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gibem"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(0, -1, 0)
+spread = 0.0
+initial_velocity_min = 800.0
+initial_velocity_max = 800.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_max = 0.5
+
+[node name="Stage4" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y25c6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.755386, 0.755386, 0.755386, 1)
+position = Vector2(612.234, 314.5)
+scale = Vector2(1.6998, 1.69979)
+texture = ExtResource("2_y25c6")
+
+[node name="Note" parent="." instance=ExtResource("3_4tf8t")]
+visible = false
+position = Vector2(527, 240)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="NotePool" parent="." instance=ExtResource("4_2c4a1")]
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_f6a6x")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_right = 1133.0
+offset_bottom = 648.0
+color = Color(0.129412, 0.129412, 0.129412, 0.658824)
+
+[node name="AllButtons" parent="." instance=ExtResource("6_1c6ud")]
+position = Vector2(130, 576)
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0407986
+anchor_right = -0.0407986
+offset_left = 1016.0
+offset_right = 1204.0
+offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("7_205st")
+theme_override_font_sizes/font_size = 28
+text = "SCORE: 0"
+
+[node name="perfLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 969.0
+offset_top = 34.0
+offset_right = 1133.0
+offset_bottom = 115.0
+theme_override_fonts/font = ExtResource("7_205st")
+theme_override_font_sizes/font_size = 28
+text = "PERFECT: 0"
+
+[node name="goodLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 969.0
+offset_top = 60.0
+offset_right = 1084.0
+offset_bottom = 85.0
+theme_override_fonts/font = ExtResource("7_205st")
+theme_override_font_sizes/font_size = 28
+text = "GOOD: 0"
+
+[node name="missLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 969.0
+offset_top = 85.0
+offset_right = 1084.0
+offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("7_205st")
+theme_override_font_sizes/font_size = 28
+text = "MISS: 0"
+
+[node name="hpLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 34.0
+offset_right = 337.0
+offset_bottom = 85.0
+theme_override_fonts/font = ExtResource("8_1s06m")
+theme_override_font_sizes/font_size = 50
+text = "HP ❤️: 80"
+
+[node name="LaneDivide" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 272.0
+offset_right = 282.0
+offset_bottom = 648.0
+color = Color(0.337255, 0.337255, 0.337255, 0.545098)
+
+[node name="ColorRect2" type="ColorRect" parent="LaneDivide"]
+layout_mode = 0
+offset_left = 322.0
+offset_right = 332.0
+offset_bottom = 648.0
+color = Color(0.337255, 0.337255, 0.337255, 0.545098)
+
+[node name="ColorRect3" type="ColorRect" parent="LaneDivide"]
+layout_mode = 0
+offset_left = 631.0
+offset_right = 641.0
+offset_bottom = 648.0
+color = Color(0.337255, 0.337255, 0.337255, 0.545098)
+
+[node name="PauseMenu" parent="." instance=ExtResource("9_osjy4")]
+layout_mode = 1
+
+[node name="Laser1" type="CanvasLayer" parent="."]
+
+[node name="GPUParticles2D" type="CPUParticles2D" parent="Laser1"]
+modulate = Color(1, 1, 1, 0.4)
+self_modulate = Color(0.897455, 0.0937869, 0, 1)
+material = SubResource("ShaderMaterial_d0qpb")
+position = Vector2(130, 301)
+scale = Vector2(3, 3)
+emitting = false
+amount = 1
+texture = ExtResource("11_oq86f")
+lifetime = 0.5
+one_shot = true
+fract_delta = false
+direction = Vector2(0, -1)
+spread = 0.0
+gravity = Vector2(0, 0)
+scale_amount_curve = SubResource("Curve_w4v1o")
+color = Color(1, 0.300051, 0.236805, 1)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.4)
+self_modulate = Color(1, 0.109804, 0, 1)
+material = SubResource("ShaderMaterial_d0qpb")
+position = Vector2(130, 803)
+amount = 1
+texture = ExtResource("11_oq86f")
+lifetime = 0.4
+trail_enabled = true
+trail_lifetime = 0.5
+trail_sections = 17
+process_material = SubResource("ParticleProcessMaterial_gibem")
+
+[node name="Laser2" type="CanvasLayer" parent="."]
+
+[node name="GPUParticles2D" type="CPUParticles2D" parent="Laser2"]
+modulate = Color(1, 1, 1, 0.4)
+self_modulate = Color(0.0215349, 0.24122, 1, 1)
+material = SubResource("ShaderMaterial_d0qpb")
+position = Vector2(430, 301)
+scale = Vector2(3, 3)
+emitting = false
+amount = 1
+texture = ExtResource("11_oq86f")
+lifetime = 0.5
+one_shot = true
+fract_delta = false
+direction = Vector2(0, -1)
+spread = 0.0
+gravity = Vector2(0, 0)
+scale_amount_curve = SubResource("Curve_w4v1o")
+
+[node name="Laser3" type="CanvasLayer" parent="."]
+
+[node name="GPUParticles2D" type="CPUParticles2D" parent="Laser3"]
+modulate = Color(1, 1, 1, 0.4)
+self_modulate = Color(0.0196078, 1, 0, 1)
+material = SubResource("ShaderMaterial_d0qpb")
+position = Vector2(730, 301)
+scale = Vector2(3, 3)
+emitting = false
+amount = 1
+texture = ExtResource("11_oq86f")
+lifetime = 0.5
+one_shot = true
+fract_delta = false
+direction = Vector2(0, -1)
+spread = 0.0
+gravity = Vector2(0, 0)
+scale_amount_curve = SubResource("Curve_w4v1o")
+
+[node name="Laser4" type="CanvasLayer" parent="."]
+
+[node name="GPUParticles2D" type="CPUParticles2D" parent="Laser4"]
+modulate = Color(1, 1, 1, 0.4)
+self_modulate = Color(0.905882, 0, 0.988235, 1)
+material = SubResource("ShaderMaterial_d0qpb")
+position = Vector2(1030, 301)
+scale = Vector2(3, 3)
+emitting = false
+amount = 1
+texture = ExtResource("11_oq86f")
+lifetime = 0.5
+one_shot = true
+fract_delta = false
+direction = Vector2(0, -1)
+spread = 0.0
+gravity = Vector2(0, 0)
+scale_amount_curve = SubResource("Curve_w4v1o")
+
+[connection signal="finished" from="MusicPlayer" to="." method="_on_music_player_finished"]
+[connection signal="Button1" from="AllButtons" to="." method="_on_allButtons_button_1"]
+[connection signal="Button2" from="AllButtons" to="." method="_on_all_buttons_button_2"]
+[connection signal="Button3" from="AllButtons" to="." method="_on_all_buttons_button_3"]
+[connection signal="Button4" from="AllButtons" to="." method="_on_all_buttons_button_4"]

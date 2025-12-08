@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cedtsh7yeg3om"
+path="res://.godot/imported/Porter Robinson - Flicker (Official Video).mp3-dccc1b054ee8c0e7f46e54d7de0767a0.mp3str"
+
+[deps]
+
+source_file="res://temp/Porter Robinson - Flicker (Official Video).mp3"
+dest_files=["res://.godot/imported/Porter Robinson - Flicker (Official Video).mp3-dccc1b054ee8c0e7f46e54d7de0767a0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

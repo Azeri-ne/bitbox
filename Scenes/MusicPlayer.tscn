@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://dg1qaxivoy07j" path="res://Scripts/MenuMusic.gd" id="1_w8kvg"]
 
 [node name="MusicPlayer" type="Node"]
+process_mode = 3
 script = ExtResource("1_w8kvg")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 autoplay = true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bmtcbxv0v2ma6"
+path="res://.godot/imported/AMV - Persona 3 - Kimi No Kioku (Roselia Cover).mp3-3fcaf3f4cc632c8d5a57dbe2db91fcad.mp3str"
+
+[deps]
+
+source_file="res://temp/AMV - Persona 3 - Kimi No Kioku (Roselia Cover).mp3"
+dest_files=["res://.godot/imported/AMV - Persona 3 - Kimi No Kioku (Roselia Cover).mp3-3fcaf3f4cc632c8d5a57dbe2db91fcad.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

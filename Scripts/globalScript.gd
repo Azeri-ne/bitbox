@@ -1,25 +1,30 @@
 extends Node
 
-
-#@export var pressSFX: AudioStream
-@export var pressSFX := preload("res://Assets/drum-hitnormal.ogg")
+@export var pressSFX := preload("res://Assets/button-click-289742.mp3")
 @export var glow: Sprite2D
 @onready var audioPlay := AudioStreamPlayer2D.new()
+
+
 var tween: Tween = null
 
 var Percent
 var Score: int = 0
+var HP: int = 150
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
 	if pressSFX != null:
 		add_child(audioPlay)
 		audioPlay.stream = pressSFX
+		
 		
 	if glow != null:
 		glow.visible = false
 		glow.modulate.a = 0.0
 		tween = create_tween()
 		tween.pause()
+
 
 
 #func _process(delta: float) -> void:
@@ -63,22 +68,6 @@ func getOverlap(r1: float, r2: float, d: float) -> float:
 	
 	
 func ScoreSystem(Percent: float, Score: int) -> int:
-	#print(Percent)
-	#if Percent == 0.0:
-		#Score -= 3
-		#return Score
-	#elif Percent >= 1.0 && Percent <= 25.0:
-		#Score += 2
-		#return Score
-	#elif Percent >= 26.0 && Percent <= 50.0:
-		#Score += 5
-		#return Score
-	#elif Percent >= 51.0 && Percent <= 75.0:
-		#Score += 8
-		#return Score
-	#elif Percent >= 76.0 && Percent <= 100.0:
-		#Score += 10
-		#return Score
 	if Percent == 0.0:
 		return Score - 3
 	elif Percent <= 25.0:
@@ -87,10 +76,15 @@ func ScoreSystem(Percent: float, Score: int) -> int:
 		return Score + 5
 	elif Percent <= 75.0:
 		return Score + 8
-	else:
+	elif Percent == 100:
 		return Score + 10
+	else:
+		return Score + 0
 		
-		
+func hpSystem(HP: int):
+	if HP <= 0:
+		Transition.go_to("res://Scenes/results.tscn")
+		return HP
 
 func btnEffect():
 	if glow != null:
@@ -100,14 +94,16 @@ func btnEffect():
 		tween.set_loops()  # loop indefinitely
 		tween.tween_property(glow, "modulate:a", 0.6, 0.2)
 		tween.tween_property(glow, "modulate:a", 0.3, 0.2)
-
+		
 	
 	if pressSFX != null:
 		audioPlay.play()
 func releaseBtn():
 	if glow != null:
 		glow.visible = false
+
 		
 func play_sfx():
 	if audioPlay.stream != null:
 		audioPlay.play()
+		

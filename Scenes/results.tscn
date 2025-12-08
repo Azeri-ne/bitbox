@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1ffbtn35tpu2"]
+[gd_scene load_steps=4 format=3 uid="uid://d1ffbtn35tpu2"]
 
 [ext_resource type="Script" uid="uid://dgp2xfkub4gtx" path="res://Scripts/results.gd" id="1_r1how"]
 [ext_resource type="Texture2D" uid="uid://4gdl45unc2vl" path="res://Assets/pixel-art-cloudy-night-sky-vector-49391664.png" id="2_3cjc3"]
+[ext_resource type="FontFile" uid="uid://bur2jhbh8pnf0" path="res://Assets/BoldPixels.ttf" id="3_3iro3"]
 
 [node name="Results" type="Control"]
 layout_mode = 3
@@ -40,6 +41,16 @@ offset_top = 40.0
 offset_right = 71.0
 offset_bottom = 71.0
 text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -100.0
+offset_top = -104.0
+offset_right = 186.0
+offset_bottom = -35.0
+theme_override_fonts/font = ExtResource("3_3iro3")
+theme_override_font_sizes/font_size = 50
+text = "GAME OVER"
 
 [connection signal="pressed" from="StageSelect" to="." method="_on_replay_button_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

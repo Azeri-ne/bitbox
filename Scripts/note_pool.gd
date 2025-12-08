@@ -2,7 +2,10 @@ extends Node
 
 @export var note_scene: PackedScene
 @export var pool_size := 50
+
 var notes: Array = []
+var long_notes: Array = []
+
 
 
 var active_notes := {
@@ -21,6 +24,8 @@ func _ready():
 		notes.append(note)
 
 		note.note_done.connect(_on_note_done)
+
+
 
 func _on_note_done(note):
 	return_to_pool(note)
@@ -72,3 +77,5 @@ func get_first_note_in_lane(lane: int) -> Area2D:
 		if note.global_position.y > first.global_position.y:
 			first = note
 	return first
+	
+	

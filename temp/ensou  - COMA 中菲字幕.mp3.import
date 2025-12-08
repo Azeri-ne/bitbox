@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cigqk2t5tpp0n"
+path="res://.godot/imported/ensou  - COMA 中菲字幕.mp3-4442aeb4012fac76ed8788f327a14530.mp3str"
+
+[deps]
+
+source_file="res://temp/ensou  - COMA 中菲字幕.mp3"
+dest_files=["res://.godot/imported/ensou  - COMA 中菲字幕.mp3-4442aeb4012fac76ed8788f327a14530.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

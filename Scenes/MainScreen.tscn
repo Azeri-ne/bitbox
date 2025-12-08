@@ -247,6 +247,7 @@ theme_override_fonts/font = ExtResource("3_a6epe")
 text = "Forgot password?"
 
 [node name="MenuTheme" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
 stream = ExtResource("5_xg8v3")
 parameters/looping = true
 
