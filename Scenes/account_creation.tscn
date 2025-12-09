@@ -1,0 +1,130 @@
+[gd_scene load_steps=3 format=3 uid="uid://pee64folnv7x"]
+
+[ext_resource type="FontFile" uid="uid://bur2jhbh8pnf0" path="res://Assets/BoldPixels.ttf" id="1_0xrlo"]
+[ext_resource type="Script" uid="uid://bi8o76ofg4l6t" path="res://Scripts/account_creation.gd" id="1_6d1ls"]
+
+[node name="AccountCreation" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6d1ls")
+
+[node name="TempBackground" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.5370113, 0.5370113, 0.5370113, 1)
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 104.0
+offset_right = 816.0
+offset_bottom = 576.0
+
+[node name="Header" type="Label" parent="."]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 48.0
+offset_right = 924.0
+offset_bottom = 80.0
+theme_override_fonts/font = ExtResource("1_0xrlo")
+theme_override_font_sizes/font_size = 32
+text = "Create an account and join other players online!"
+
+[node name="Username" type="Label" parent="."]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 144.0
+offset_right = 502.0
+offset_bottom = 176.0
+theme_override_fonts/font = ExtResource("1_0xrlo")
+theme_override_font_sizes/font_size = 32
+text = "Username:"
+
+[node name="Email" type="Label" parent="."]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 192.0
+offset_right = 502.0
+offset_bottom = 224.0
+theme_override_fonts/font = ExtResource("1_0xrlo")
+theme_override_font_sizes/font_size = 32
+text = "Email:"
+
+[node name="Password" type="Label" parent="."]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 240.0
+offset_right = 502.0
+offset_bottom = 272.0
+theme_override_fonts/font = ExtResource("1_0xrlo")
+theme_override_font_sizes/font_size = 32
+text = "Password:"
+
+[node name="UsernameInput" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 144.0
+offset_right = 792.0
+offset_bottom = 176.0
+theme_override_fonts/font = ExtResource("1_0xrlo")
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Your account name"
+
+[node name="EmailInput" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 192.0
+offset_right = 792.0
+offset_bottom = 224.0
+theme_override_fonts/font = ExtResource("1_0xrlo")
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Your email address"
+
+[node name="PasswordInput" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 240.0
+offset_right = 792.0
+offset_bottom = 272.0
+theme_override_fonts/font = ExtResource("1_0xrlo")
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Keep it secure"
+secret = true
+secret_character = "*"
+
+[node name="CreateAccount" type="Button" parent="."]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 432.0
+offset_right = 745.0
+offset_bottom = 488.0
+theme_override_fonts/font = ExtResource("1_0xrlo")
+theme_override_font_sizes/font_size = 48
+text = "Create Account!"
+
+[node name="Status" type="Label" parent="."]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 392.0
+offset_right = 641.0
+offset_bottom = 415.0
+theme_override_fonts/font = ExtResource("1_0xrlo")
+theme_override_font_sizes/font_size = 18
+text = "Skibidi toilet"
+horizontal_alignment = 1
+
+[node name="GotoMain" type="Button" parent="."]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 512.0
+offset_right = 624.0
+offset_bottom = 552.0
+theme_override_fonts/font = ExtResource("1_0xrlo")
+theme_override_font_sizes/font_size = 24
+text = "Back"

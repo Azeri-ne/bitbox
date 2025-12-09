@@ -12,7 +12,7 @@ config_version=5
 
 config/name="BangkoBitsune"
 run/main_scene="uid://dv27w88ywekxi"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
 [autoload]
@@ -21,6 +21,7 @@ Globals="*res://Scripts/globalScript.gd"
 SceneLoader="*res://Scripts/scene_loader.gd"
 Transition="*res://Scenes/transition.tscn"
 MusicPlayer="*res://Scenes/MusicPlayer.tscn"
+Talo="*res://addons/talo/talo_manager.gd"
 
 [display]
 
@@ -30,6 +31,10 @@ window/stretch/aspect="keep_width"
 [dotnet]
 
 project/assembly_name="BangkoBitsune"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/talo/plugin.cfg")
 
 [input]
 
