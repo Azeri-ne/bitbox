@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=3 uid="uid://el43ftjtpiqo"]
+
+[ext_resource type="Script" uid="uid://v5cv3k50vab2" path="res://Scripts/gallery_1.gd" id="1_vb0kh"]
+[ext_resource type="Texture2D" uid="uid://der44epobbuul" path="res://temp/testbg.jpg" id="1_xupvj"]
+[ext_resource type="Texture2D" uid="uid://pwm1xuwv0c8k" path="res://temp/385525605_1027160115165451_4803001836009224232_n.jpg" id="2_s5olp"]
+[ext_resource type="Texture2D" uid="uid://qu02nuvwr7dl" path="res://temp/427871798_1026399028454818_618626392353757203_n.png" id="3_vb0kh"]
+[ext_resource type="Texture2D" uid="uid://b5onlr7jlnllt" path="res://temp/592064319_1372930214579988_1432580362785038770_n.png" id="4_vqo10"]
+[ext_resource type="Texture2D" uid="uid://cx8r7gbvrf53x" path="res://temp/593477069_693986306882301_1154898146696802041_n.jpg" id="5_yw1qv"]
+[ext_resource type="Texture2D" uid="uid://do7pvknj35qxg" path="res://temp/594039884_2014210872455197_1892218045892344514_n.jpg" id="6_8yrco"]
+[ext_resource type="FontFile" uid="uid://bur2jhbh8pnf0" path="res://Assets/BoldPixels.ttf" id="7_s5olp"]
+
+[node name="Gallery1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vb0kh")
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(598, 372)
+scale = Vector2(0.395895, 0.395895)
+texture = ExtResource("1_xupvj")
+
+[node name="pic1" type="Sprite2D" parent="."]
+position = Vector2(199.977, 228.155)
+scale = Vector2(0.19529, 0.201739)
+texture = ExtResource("2_s5olp")
+
+[node name="pic2" type="Sprite2D" parent="."]
+position = Vector2(602.34, 228.762)
+scale = Vector2(0.477815, 0.477815)
+texture = ExtResource("3_vb0kh")
+
+[node name="pic3" type="Sprite2D" parent="."]
+position = Vector2(320.829, 493.964)
+scale = Vector2(0.255085, 0.255085)
+texture = ExtResource("4_vqo10")
+
+[node name="pic4" type="Sprite2D" parent="."]
+position = Vector2(967.728, 228.077)
+scale = Vector2(0.473889, 0.522871)
+texture = ExtResource("5_yw1qv")
+
+[node name="pic5" type="Sprite2D" parent="."]
+position = Vector2(842.326, 492.703)
+scale = Vector2(0.247549, 0.255724)
+texture = ExtResource("6_8yrco")
+
+[node name="Menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 24.0
+offset_right = 131.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("7_s5olp")
+theme_override_font_sizes/font_size = 30
+text = "Menu"
+
+[node name="Next" type="Button" parent="."]
+offset_left = 1008.0
+offset_top = 24.0
+offset_right = 1107.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("7_s5olp")
+theme_override_font_sizes/font_size = 30
+text = "Next"
+
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

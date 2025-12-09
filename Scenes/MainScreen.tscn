@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dv27w88ywekxi"]
+[gd_scene load_steps=8 format=3 uid="uid://dv27w88ywekxi"]
 
 [ext_resource type="Script" uid="uid://5b6ia0sq0h71" path="res://Scripts/Main_Screen.gd" id="1_ip4yt"]
+[ext_resource type="Texture2D" uid="uid://b02vl1pgiqdfv" path="res://Assets/images-removebg-preview.png" id="2_3bkv3"]
 [ext_resource type="Texture2D" uid="uid://der44epobbuul" path="res://temp/testbg.jpg" id="2_xg8v3"]
 [ext_resource type="FontFile" uid="uid://bur2jhbh8pnf0" path="res://Assets/BoldPixels.ttf" id="3_a6epe"]
+[ext_resource type="Texture2D" uid="uid://babhmh57ccddb" path="res://Assets/da82b83c75721d61533434c2268c0001_t-removebg-preview.png" id="3_rm1n3"]
 [ext_resource type="FontFile" uid="uid://cpc00oc4ly017" path="res://Assets/ThaleahFat.ttf" id="4_3bkv3"]
 [ext_resource type="AudioStream" uid="uid://hyn62o8uxnvb" path="res://Assets/P3P - Title screen theme.mp3" id="5_xg8v3"]
 
@@ -14,6 +16,36 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ip4yt")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="CanvasLayer"]
+position = Vector2(536, 613)
+amount = 10
+texture = ExtResource("2_3bkv3")
+emission_shape = 3
+emission_rect_extents = Vector2(400, 50)
+direction = Vector2(0, -1)
+spread = 1.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 500.0
+initial_velocity_max = 500.0
+scale_amount_min = 0.1
+scale_amount_max = 0.2
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="CanvasLayer"]
+position = Vector2(613, 618)
+amount = 15
+texture = ExtResource("3_rm1n3")
+emission_shape = 3
+emission_rect_extents = Vector2(500, 50)
+direction = Vector2(0, -1)
+spread = 1.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 500.0
+initial_velocity_max = 500.0
+scale_amount_min = 0.1
+scale_amount_max = 0.2
 
 [node name="TempBackground" type="ColorRect" parent="."]
 layout_mode = 0
@@ -146,16 +178,6 @@ theme_override_fonts/font = ExtResource("3_a6epe")
 theme_override_font_sizes/font_size = 48
 text = "Gallery"
 
-[node name="Options" type="Button" parent="Buttons"]
-layout_mode = 0
-offset_left = 200.0
-offset_top = 432.0
-offset_right = 361.0
-offset_bottom = 500.0
-theme_override_fonts/font = ExtResource("3_a6epe")
-theme_override_font_sizes/font_size = 48
-text = "Options"
-
 [node name="Exit" type="Button" parent="Buttons"]
 layout_mode = 0
 offset_left = 248.0
@@ -249,7 +271,9 @@ text = "Forgot password?"
 [node name="MenuTheme" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
 stream = ExtResource("5_xg8v3")
+volume_db = -49.518
 parameters/looping = true
 
 [connection signal="pressed" from="Buttons/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Buttons/Gallery" to="." method="_on_gallery_pressed"]
 [connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]

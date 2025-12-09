@@ -1,0 +1,72 @@
+[gd_scene load_steps=9 format=3 uid="uid://cjarccymx4ln5"]
+
+[ext_resource type="Script" uid="uid://v5cv3k50vab2" path="res://Scripts/gallery_1.gd" id="1_dbt23"]
+[ext_resource type="Texture2D" uid="uid://der44epobbuul" path="res://temp/testbg.jpg" id="2_3vn1e"]
+[ext_resource type="Texture2D" uid="uid://cqvhyexuaa2b4" path="res://temp/594545503_1437841811235264_1510240178831176161_n.jpg" id="3_72uff"]
+[ext_resource type="Texture2D" uid="uid://s00f6t850yij" path="res://temp/594423215_1394406452283472_7038111148865292056_n.jpg" id="4_xxp4v"]
+[ext_resource type="Texture2D" uid="uid://b25s4gp1bderw" path="res://Assets/483948336_1196314338786637_7975319328991499188_n.jpg" id="5_px48y"]
+[ext_resource type="Texture2D" uid="uid://cfqxk1ghgw4ku" path="res://Assets/847968.jpg" id="6_rrtew"]
+[ext_resource type="Texture2D" uid="uid://c3ep7r3ivj3eb" path="res://Assets/bg.png" id="7_aqb3a"]
+[ext_resource type="FontFile" uid="uid://bur2jhbh8pnf0" path="res://Assets/BoldPixels.ttf" id="8_vhqpf"]
+
+[node name="Gallery2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dbt23")
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(598, 372)
+scale = Vector2(0.395895, 0.395895)
+texture = ExtResource("2_3vn1e")
+
+[node name="pic1" type="Sprite2D" parent="."]
+position = Vector2(932.211, 468)
+scale = Vector2(0.20148, 0.260217)
+texture = ExtResource("3_72uff")
+
+[node name="pic2" type="Sprite2D" parent="."]
+position = Vector2(524.211, 464)
+scale = Vector2(0.188759, 0.263889)
+texture = ExtResource("4_xxp4v")
+
+[node name="pic3" type="Sprite2D" parent="."]
+position = Vector2(798.362, 167.522)
+scale = Vector2(0.201706, 0.252738)
+texture = ExtResource("5_px48y")
+
+[node name="pic4" type="Sprite2D" parent="."]
+position = Vector2(164.211, 460)
+scale = Vector2(0.16272, 0.239482)
+texture = ExtResource("6_rrtew")
+
+[node name="pic5" type="Sprite2D" parent="."]
+position = Vector2(368, 164.869)
+scale = Vector2(0.226343, 0.257649)
+texture = ExtResource("7_aqb3a")
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 26.0
+offset_right = 123.0
+offset_bottom = 84.0
+theme_override_fonts/font = ExtResource("8_vhqpf")
+theme_override_font_sizes/font_size = 30
+text = "Back"
+
+[node name="Menu" type="Button" parent="."]
+offset_left = 1008.0
+offset_top = 31.0
+offset_right = 1107.0
+offset_bottom = 89.0
+theme_override_fonts/font = ExtResource("8_vhqpf")
+theme_override_font_sizes/font_size = 30
+text = "Menu"
+
+[connection signal="pressed" from="Back" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]

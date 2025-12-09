@@ -42,8 +42,8 @@ func _init_main_buttons():
 		"Play the rhythm game.")
 	_setup_button_description(_gallery_button, 
 		"View your art from the maps.")
-	_setup_button_description(_options_button, 
-		"Check and set your options.")
+	#_setup_button_description(_options_button, 
+		#"Check and set your options.")
 	_setup_button_description(_exit_button, 
 		"Exit the game.")
 
@@ -96,3 +96,7 @@ func _on_play_pressed() -> void:
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_gallery_pressed() -> void:
+	Transition.go_to("res://Scenes/gallery1.tscn")
