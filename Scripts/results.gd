@@ -12,5 +12,5 @@ func _on_replay_button_pressed() -> void:
 
 
 func _on_exit_button_pressed() -> void:
-	SceneLoader.change_scene("res://Scenes/MainScreen.tscn")
+	SceneLoader.change_scene("res://Scenes/main_menu.tscn")
 	#MusicPlayer.play_music(load("res://Assets/P3P - Title screen theme.mp3"))

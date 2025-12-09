@@ -14,109 +14,138 @@ grow_vertical = 2
 script = ExtResource("1_bn3nu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(598, 372)
+position = Vector2(392, 584)
 scale = Vector2(0.395895, 0.395895)
 texture = ExtResource("2_rooga")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
-offset_left = 35.0
-offset_top = 35.0
-offset_right = 128.0
-offset_bottom = 58.0
+offset_left = 360.0
+offset_top = 48.0
+offset_right = 827.0
+offset_bottom = 132.0
 theme_override_fonts/font = ExtResource("3_x57uv")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 84
 text = "Select Stage"
 
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 552.0
+offset_right = 629.0
+offset_bottom = 587.0
+theme_override_fonts/font = ExtResource("3_x57uv")
+theme_override_font_sizes/font_size = 26
+text = "Back"
+
 [node name="Stage1" type="Button" parent="."]
-layout_mode = 2
-offset_left = 40.0
+layout_mode = 0
+offset_left = 192.0
 offset_top = 216.0
-offset_right = 208.0
-offset_bottom = 247.0
+offset_right = 360.0
+offset_bottom = 251.0
+theme_override_fonts/font = ExtResource("3_x57uv")
+theme_override_font_sizes/font_size = 26
 text = "Stage 1"
 
 [node name="Stage2" type="Button" parent="."]
-layout_mode = 2
-offset_left = 40.0
+layout_mode = 0
+offset_left = 192.0
 offset_top = 264.0
-offset_right = 208.0
-offset_bottom = 295.0
+offset_right = 360.0
+offset_bottom = 299.0
+theme_override_fonts/font = ExtResource("3_x57uv")
+theme_override_font_sizes/font_size = 26
 text = "Stage 2"
 
 [node name="Stage3" type="Button" parent="."]
 layout_mode = 0
-offset_left = 40.0
+offset_left = 192.0
 offset_top = 312.0
-offset_right = 208.0
-offset_bottom = 343.0
+offset_right = 360.0
+offset_bottom = 347.0
+theme_override_fonts/font = ExtResource("3_x57uv")
+theme_override_font_sizes/font_size = 26
 text = "Stage 3
 "
 
-[node name="BackButton" type="Button" parent="."]
-layout_mode = 2
-offset_left = 40.0
-offset_top = 104.0
-offset_right = 149.0
-offset_bottom = 135.0
-text = "Back"
-
 [node name="Stage4" type="Button" parent="."]
-offset_left = 40.0
+layout_mode = 0
+offset_left = 192.0
 offset_top = 360.0
-offset_right = 208.0
-offset_bottom = 391.0
+offset_right = 360.0
+offset_bottom = 395.0
+theme_override_fonts/font = ExtResource("3_x57uv")
+theme_override_font_sizes/font_size = 26
 text = "Stage 4
 "
 
 [node name="Stage5" type="Button" parent="."]
-offset_left = 40.0
+layout_mode = 0
+offset_left = 192.0
 offset_top = 408.0
-offset_right = 208.0
-offset_bottom = 439.0
+offset_right = 360.0
+offset_bottom = 443.0
+theme_override_fonts/font = ExtResource("3_x57uv")
+theme_override_font_sizes/font_size = 26
 text = "Stage 5
 "
 
 [node name="Stage6" type="Button" parent="."]
-offset_left = 272.0
+layout_mode = 0
+offset_left = 824.0
 offset_top = 216.0
-offset_right = 440.0
-offset_bottom = 247.0
+offset_right = 992.0
+offset_bottom = 251.0
+theme_override_fonts/font = ExtResource("3_x57uv")
+theme_override_font_sizes/font_size = 26
 text = "Stage 6
 "
 
 [node name="Stage7" type="Button" parent="."]
-offset_left = 272.0
+layout_mode = 0
+offset_left = 824.0
 offset_top = 264.0
-offset_right = 440.0
-offset_bottom = 295.0
+offset_right = 992.0
+offset_bottom = 299.0
+theme_override_fonts/font = ExtResource("3_x57uv")
+theme_override_font_sizes/font_size = 26
 text = "Stage 7"
 
 [node name="Stage8" type="Button" parent="."]
-offset_left = 272.0
+layout_mode = 0
+offset_left = 824.0
 offset_top = 312.0
-offset_right = 440.0
-offset_bottom = 343.0
+offset_right = 992.0
+offset_bottom = 347.0
+theme_override_fonts/font = ExtResource("3_x57uv")
+theme_override_font_sizes/font_size = 26
 text = "Stage 8"
 
 [node name="Stage9" type="Button" parent="."]
-offset_left = 272.0
+layout_mode = 0
+offset_left = 824.0
 offset_top = 360.0
-offset_right = 440.0
-offset_bottom = 391.0
+offset_right = 992.0
+offset_bottom = 395.0
+theme_override_fonts/font = ExtResource("3_x57uv")
+theme_override_font_sizes/font_size = 26
 text = "Stage 9"
 
 [node name="Stage10" type="Button" parent="."]
-offset_left = 272.0
+layout_mode = 0
+offset_left = 824.0
 offset_top = 408.0
-offset_right = 440.0
-offset_bottom = 439.0
+offset_right = 992.0
+offset_bottom = 443.0
+theme_override_fonts/font = ExtResource("3_x57uv")
+theme_override_font_sizes/font_size = 26
 text = "Stage 10"
 
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Stage1" to="." method="_on_stage_1_pressed"]
 [connection signal="pressed" from="Stage2" to="." method="_on_stage_2_pressed"]
 [connection signal="pressed" from="Stage3" to="." method="_on_stage_3_pressed"]
-[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Stage4" to="." method="_on_stage_4_pressed"]
 [connection signal="pressed" from="Stage5" to="." method="_on_stage_5_pressed"]
 [connection signal="pressed" from="Stage6" to="." method="_on_stage_6_pressed"]
