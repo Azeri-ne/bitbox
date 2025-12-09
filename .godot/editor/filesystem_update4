@@ -1,5 +1,2 @@
-res://scenes/account_creation.tscn
-res://shaders/button.gdshader
-res://scripts/account_creation.gd
 res://scenes/main_menu.tscn
-res://scripts/main_menu.gd
+res://shaders/button.gdshader
