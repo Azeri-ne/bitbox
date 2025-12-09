@@ -17,6 +17,7 @@ script = ExtResource("1_bn3nu")
 position = Vector2(392, 584)
 scale = Vector2(0.395895, 0.395895)
 texture = ExtResource("2_rooga")
+metadata/_edit_lock_ = true
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
