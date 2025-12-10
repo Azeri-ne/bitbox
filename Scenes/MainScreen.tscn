@@ -161,9 +161,9 @@ metadata/_edit_lock_ = true
 [node name="Play" type="Button" parent="Buttons"]
 layout_mode = 0
 offset_left = 112.0
-offset_top = 272.0
+offset_top = 312.0
 offset_right = 233.0
-offset_bottom = 340.0
+offset_bottom = 380.0
 theme_override_fonts/font = ExtResource("3_a6epe")
 theme_override_font_sizes/font_size = 48
 text = "Play"
@@ -171,19 +171,19 @@ text = "Play"
 [node name="Gallery" type="Button" parent="Buttons"]
 layout_mode = 0
 offset_left = 152.0
-offset_top = 352.0
+offset_top = 392.0
 offset_right = 313.0
-offset_bottom = 420.0
+offset_bottom = 460.0
 theme_override_fonts/font = ExtResource("3_a6epe")
 theme_override_font_sizes/font_size = 48
 text = "Gallery"
 
 [node name="Exit" type="Button" parent="Buttons"]
 layout_mode = 0
-offset_left = 248.0
-offset_top = 512.0
-offset_right = 409.0
-offset_bottom = 580.0
+offset_left = 224.0
+offset_top = 472.0
+offset_right = 385.0
+offset_bottom = 540.0
 theme_override_fonts/font = ExtResource("3_a6epe")
 theme_override_font_sizes/font_size = 48
 text = "Exit
