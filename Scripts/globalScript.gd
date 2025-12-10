@@ -9,6 +9,7 @@ var tween: Tween = null
 
 var Percent
 var Score: int = 0
+var ResultScore: int = 0
 var HP: int = 150
 
 # Called when the node enters the scene tree for the first time.
@@ -39,7 +40,7 @@ func _getDistance(pos1: Vector2, pos2: Vector2):
 func getOverlap(r1: float, r2: float, d: float) -> float: 
 	#No overlap
 	if d >= r1 + r2:
-		print("No overlap", " MISS!")
+		#print("No overlap", " MISS!")
 
 		return 0.0
 		
@@ -49,7 +50,7 @@ func getOverlap(r1: float, r2: float, d: float) -> float:
 	
 	#One circle inside another
 	elif d <= abs(r1 - r2) + 1.5: #can either be 1.0 or 1.5. Changing hitboxes may be better for improving accuracy
-		print("Full overlap", " PERFECT!")
+		#print("Full overlap", " PERFECT!")
 		var smallerArea = PI * min(r1, r2) ** 2
 		var baseArea = PI * r1 ** 2
 
@@ -59,7 +60,7 @@ func getOverlap(r1: float, r2: float, d: float) -> float:
 	var part1 = r1**2 * acos((d**2 + r1**2 - r2**2) / (2 * d * r1))
 	var part2 = r2**2 * acos((d**2 + r2**2 - r1**2) / (2 * d * r2))
 	var part3 = 0.5 * sqrt((-d + r1 + r2) * (d + r1 - r2) * (d - r1 + r2) * (d + r1 + r2))
-	print("Partial overlap", " GOOD!")
+	#print("Partial overlap", " GOOD!")
 	var overlapArea = part1 + part2 - part3
 	var baseArea = PI * r1 ** 2
 	Percent = (overlapArea / baseArea) * 100.0
@@ -80,7 +81,7 @@ func ScoreSystem(Percent: float, Score: int) -> int:
 		return Score + 10
 	else:
 		return Score + 0
-		
+	
 func hpSystem(HP: int):
 	if HP <= 0:
 		Transition.go_to("res://Scenes/results.tscn")

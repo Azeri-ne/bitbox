@@ -29,8 +29,11 @@ func _ready() -> void:
 	
 var beat_count = 0
 func _process(delta: float) -> void:
+	Globals.ResultScore = Score
 	$AllButtons._buttonInputs()
-
+	#Globals.Score = Score
+	
+	
 	if !$MusicPlayer.playing:
 		return
 	timer += delta
@@ -54,7 +57,6 @@ func _on_allButtons_button_1() -> void:
 		var distance = Globals._getDistance(button_pos, note_pos)
 		var overlap = Globals.getOverlap(b1Rad, noteRad, distance)
 		Score = Globals.ScoreSystem(overlap, Score)
-		
 		_update_score_ui()
 		
 		
@@ -69,20 +71,20 @@ func _on_allButtons_button_1() -> void:
 			_update_hp_ui()
 		elif overlap == 100.0:
 			perf_Count += 1
-			HP = min(HP + 5, 80)
+			HP = min(HP + 3, 80)
 			$Laser1/GPUParticles2D.restart()
 			$AllButtons/HitSFX.play()
 			_update_perfHit_ui()
 			_update_hp_ui()
 		else:
 			good_Count += 1
-			HP = min(HP + 3, 80)
+			HP = min(HP + 1, 80)
 			$Laser1/GPUParticles2D.restart()
 			$AllButtons/Hit2SFX.play()
 			_update_goodHit_ui()
 			_update_hp_ui()
 	else:
-		print("No notes in lane 1")		
+		pass	
 
 	
 	
@@ -111,19 +113,19 @@ func _on_all_buttons_button_2() -> void:
 			_update_hp_ui()
 		elif overlap == 100.0:
 			perf_Count += 1
-			HP = min(HP + 5, 80)
+			HP = min(HP + 3, 80)
 			$Laser2/GPUParticles2D.restart()
 			_update_perfHit_ui()
 			_update_hp_ui()
 		else:
 			good_Count += 1
-			HP = min(HP + 3, 80)
+			HP = min(HP + 1, 80)
 			$Laser2/GPUParticles2D.restart()
 			$AllButtons/Hit2SFX.play()
 			_update_goodHit_ui()
 			_update_hp_ui()
 	else:
-		print("No notes in lane 2")
+		pass
 
 
 
@@ -147,19 +149,19 @@ func _on_all_buttons_button_3() -> void:
 			_update_hp_ui()
 		elif overlap == 100.0:
 			perf_Count += 1
-			HP = min(HP + 5, 80)
+			HP = min(HP + 3, 80)
 			$Laser3/GPUParticles2D.restart()
 			_update_perfHit_ui()
 			_update_hp_ui()
 		else:
 			good_Count += 1
-			HP = min(HP + 3, 80)
+			HP = min(HP + 1, 80)
 			$Laser3/GPUParticles2D.restart()
 			$AllButtons/Hit2SFX.play()
 			_update_goodHit_ui()
 			_update_hp_ui()
 	else:
-		print("No notes in lane 3")
+		pass
 
 
 func _on_all_buttons_button_4() -> void:
@@ -186,20 +188,20 @@ func _on_all_buttons_button_4() -> void:
 			_update_hp_ui()
 		elif overlap == 100.0:
 			perf_Count += 1
-			HP = min(HP + 5, 80)
+			HP = min(HP + 3, 80)
 			$Laser4/GPUParticles2D.restart()
 			$AllButtons/HitSFX.play()
 			_update_perfHit_ui()
 			_update_hp_ui()
 		else:
 			good_Count += 1
-			HP = min(HP + 3, 80)
+			HP = min(HP + 1, 80)
 			$Laser4/GPUParticles2D.restart()
 			$AllButtons/Hit2SFX.play()
 			_update_goodHit_ui()
 			_update_hp_ui()
 	else:
-		print("No notes in lane 4")
+		pass
 
 
 
@@ -235,6 +237,8 @@ func spawn_note(lane):
 
 func _on_music_player_finished() -> void:
 	SceneLoader.change_scene("res://Scenes/results.tscn")
+	Globals.Score += Score
+	
 
 func _update_score_ui():
 	#var Score: int = 0

@@ -42,15 +42,25 @@ offset_right = 71.0
 offset_bottom = 71.0
 text = "Exit"
 
-[node name="Label" type="Label" parent="."]
+[node name="GameOverLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = -100.0
-offset_top = -104.0
-offset_right = 186.0
-offset_bottom = -35.0
+offset_left = -108.0
+offset_top = -136.0
+offset_right = 143.0
+offset_bottom = -85.0
 theme_override_fonts/font = ExtResource("3_3iro3")
 theme_override_font_sizes/font_size = 50
 text = "GAME OVER"
+
+[node name="ScoreResult" type="Label" parent="."]
+layout_mode = 0
+offset_left = -108.0
+offset_top = -82.0
+offset_right = 148.0
+offset_bottom = -51.0
+theme_override_fonts/font = ExtResource("3_3iro3")
+theme_override_font_sizes/font_size = 30
+text = "SCORE:   0"
 
 [connection signal="pressed" from="StageSelect" to="." method="_on_replay_button_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

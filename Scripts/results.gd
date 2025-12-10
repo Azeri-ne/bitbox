@@ -1,5 +1,11 @@
 extends Control
 
+#signal updateScore
+@onready var Score
+
+func _process(delta: float) -> void:
+	Score = Globals.ResultScore
+	_updateScore()
 
 
 
@@ -12,5 +18,9 @@ func _on_replay_button_pressed() -> void:
 
 
 func _on_exit_button_pressed() -> void:
-	SceneLoader.change_scene("res://Scenes/main_menu.tscn")
+	SceneLoader.change_scene("res://Scenes/MainScreen.tscn")
 	#MusicPlayer.play_music(load("res://Assets/P3P - Title screen theme.mp3"))
+	
+func _updateScore():
+	$ScoreResult.text = "SCORE:%d" % Score
+	print("Score: ", Score)

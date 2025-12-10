@@ -4,11 +4,11 @@ extends Control
 
 @onready var session_total_score: Label = $SessionTotalScore
 
-func init_score():
-	session_total_score.text = str(0)
+func _updateSessionScore():
+	$SessionTotalScore.text = " %d" % Globals.Score
 
 func _ready():
-	init_score()
+	_updateSessionScore()
 
 func _on_stage_1_pressed() -> void:
 	#SceneLoader.change_scene("res://Scenes/stage.tscn")

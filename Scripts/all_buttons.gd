@@ -40,7 +40,6 @@ func _ready() -> void:
 
 func _buttonInputs():
 	if (Input.is_action_just_pressed("1_Note")):
-		print("button1")
 		b1Sprite.texture = texPress
 		Globals.btnEffect()
 		Globals.play_sfx()
@@ -51,7 +50,6 @@ func _buttonInputs():
 		b1Sprite.texture = texUnpress
 		
 	if (Input.is_action_just_pressed("2_Note")):
-		print("button2")
 		b2Sprite.texture = texPress
 		Globals.btnEffect()
 		Globals.play_sfx()
@@ -61,7 +59,6 @@ func _buttonInputs():
 		b2Sprite.texture = texUnpress
 		
 	if (Input.is_action_just_pressed("3_Note")):
-		print("button3")
 		b3Sprite.texture = texPress
 		Globals.btnEffect()
 		Globals.play_sfx()
@@ -71,7 +68,6 @@ func _buttonInputs():
 		b3Sprite.texture = texUnpress
 		
 	if (Input.is_action_just_pressed("4_Note")):
-		print("button4")
 		b4Sprite.texture = texPress
 		Globals.btnEffect()
 		Globals.play_sfx()
