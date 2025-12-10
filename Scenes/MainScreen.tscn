@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dv27w88ywekxi"]
+[gd_scene load_steps=9 format=3 uid="uid://dv27w88ywekxi"]
 
 [ext_resource type="Script" uid="uid://5b6ia0sq0h71" path="res://Scripts/Main_Screen.gd" id="1_ip4yt"]
 [ext_resource type="Texture2D" uid="uid://b02vl1pgiqdfv" path="res://Assets/images-removebg-preview.png" id="2_3bkv3"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://babhmh57ccddb" path="res://Assets/da82b83c75721d61533434c2268c0001_t-removebg-preview.png" id="3_rm1n3"]
 [ext_resource type="FontFile" uid="uid://cpc00oc4ly017" path="res://Assets/ThaleahFat.ttf" id="4_3bkv3"]
 [ext_resource type="AudioStream" uid="uid://hyn62o8uxnvb" path="res://Assets/P3P - Title screen theme.mp3" id="5_xg8v3"]
+[ext_resource type="Texture2D" uid="uid://cb3s5ck6hjrs" path="res://Assets/BitsuneBanko.png" id="8_rm1n3"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -59,6 +60,11 @@ position = Vector2(584, 328)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("2_xg8v3")
 metadata/_edit_lock_ = true
+
+[node name="BitsuneBanko" type="Sprite2D" parent="."]
+position = Vector2(855.875, 344.1597)
+scale = Vector2(0.13077058, 0.13077058)
+texture = ExtResource("8_rm1n3")
 
 [node name="DescriptionPanel" type="Panel" parent="."]
 layout_mode = 0
