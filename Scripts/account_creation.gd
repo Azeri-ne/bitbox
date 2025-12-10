@@ -11,7 +11,7 @@ extends Control
 
 func init_back_button():
 	back_button.pressed.connect(func():
-		get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+		get_tree().change_scene_to_file("res://Scenes/MainScreen.tscn")
 	)
 	
 func init_account_creation_status():

@@ -1,5 +1,7 @@
 extends Control
 
+signal verification_required
+
 @onready var _clock: Label = $TopPanel/Clock
 
 @onready var _play_button: Button = $Buttons/Play
@@ -10,7 +12,14 @@ extends Control
 @onready var _auth_panel_button: Button = $TopPanel/Authentication
 @onready var _auth_panel: Control = $AuthWidget
 
+@onready var status: Button = $AuthWidget/AuthPanel/ForgotPassword
+@onready var username: LineEdit = $AuthWidget/AuthPanel/UsernameInput
+@onready var password: LineEdit = $AuthWidget/AuthPanel/PasswordInput
+@onready var login: Button = $AuthWidget/AuthPanel/Login
+
 @onready var _description_panel: Panel = $DescriptionPanel
+
+@onready var _signup_button: Button = $AuthWidget/AuthPanel/Signup
 
 func _update_time():
 	var datetime = Time.get_datetime_dict_from_system()
@@ -37,6 +46,10 @@ func _init_timer(timer):
 
 func _init_main_buttons():
 	_exit_button.pressed.connect(get_tree().quit)
+
+	_signup_button.pressed.connect(func():
+		get_tree().change_scene_to_file("res://Scenes/account_creation.tscn")
+	)
 
 	_setup_button_description(_play_button, 
 		"Play the rhythm game.")
@@ -75,7 +88,26 @@ func _on_button_unhovered() -> void:
 
 func _process(_delta: float) -> void:
 	_update_time()
-	
+
+func login_player() -> void:
+	var res := await Talo.player_auth.login(username.text, password.text)
+	match res:
+		Talo.player_auth.LoginResult.FAILED:
+			match Talo.player_auth.last_error.get_code():
+				TaloAuthError.ErrorCode.INVALID_CREDENTIALS:
+					status.text = "Username or password is incorrect"
+				_:
+					status.text = Talo.player_auth.last_error.get_string()
+			status.show()
+			
+		Talo.player_auth.LoginResult.VERIFICATION_REQUIRED:
+			verification_required.emit()
+		Talo.player_auth.LoginResult.OK:
+			status.show()
+			_auth_panel_button.text = username.text
+			
+			pass
+
 func _ready() -> void:
 	var timer := Timer.new()
 	_init_timer(timer)
@@ -86,6 +118,8 @@ func _ready() -> void:
 	#$MenuTheme.play()
 	MusicPlayer.play_music(load("res://Assets/P3P - Title screen theme.mp3"))
 	#Transition.go_to("res://scenes/Options.tscn")
+	
+	login.pressed.connect(login_player)
 
 
 func _on_play_pressed() -> void:
